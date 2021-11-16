@@ -1,0 +1,15 @@
+#MySQL Database 생성
+mysql -u root –p
+show databases;
+use mysql;
+create user python@localhost identified by 'python';
+grant all on *.* to python@localhost;
+select user, host from user;
+flush privileges;
+exit;
+
+mysql -u python -p
+show grants for current_user;
+create database python_db;
+show databases;
+use python_db;
